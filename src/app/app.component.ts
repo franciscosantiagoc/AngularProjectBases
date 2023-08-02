@@ -7,12 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mi primer proyecto de angular 2023';
-  userName = 'Francisco Santiago'
+  userName = 'Francisco Santiago';
+
+  textPlaceHolder = 'Escriba algo en este input';
+  inputEnabled = true;  
+  imgSource = "https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png";
 
 
   constructor() {
     setInterval(() => {
       this.userName = this.userName == 'Francisco Santiago' ? 'Nombre de usuario dinamico' : 'Francisco Santiago';
+
+      this.inputEnabled = false;
     }, 3000);
   }
 
