@@ -1,13 +1,5 @@
 <div class="container mt-4">
-  <h1 class="d-flex justify-content-center">
-    Hola bienvenido {{ userName}} a {{ title}}
-  </h1>
-
-  <h3>La suma de 2 + 2 = {{ 2+2 }}</h3>
-
-  <h3>La suma de 10 + 15 = {{ getSuma(10,15) }}</h3>
+  <h3>{{ title }}</h3>
   <br>
-  <input type="text" class="form-control" [placeholder]="textPlaceHolder" [disabled]="inputEnabled">
-  <br>
-  <img [src]="imgSource" alt="Image test" width="400px" height="400px">
+  <button class="btn btn-primary" (click)="cambiarTexto()">Clickeame!</button>
 </div>
