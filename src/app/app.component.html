@@ -1,5 +1,6 @@
 <div class="container mt-4">
-  <h3>{{ title }}</h3>
+  <input type="text" placeholder="Escriba algo aquí" class="form-control" [(ngModel)] ="texto">
+
   <br>
-  <button class="btn btn-primary" (click)="cambiarTexto()">Clickeame!</button>
+  <p class="fw-bold">{{ texto }}</p>
 </div>

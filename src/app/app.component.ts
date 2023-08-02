@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Este es un ejemplo de event binding';
+  texto = '';
   
-  cambiarTexto() : void {
-    this.title = 'En el proximo video vamos a ver Two way data-binding';
-  }
 }
