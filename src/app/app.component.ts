@@ -15,4 +15,8 @@ export class AppComponent {
       this.userName = this.userName == 'Francisco Santiago' ? 'Nombre de usuario dinamico' : 'Francisco Santiago';
     }, 3000);
   }
+
+  getSuma(num1: number, num2: number) {
+    return num1 + num2;
+  }
 }
