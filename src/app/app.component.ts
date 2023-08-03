@@ -20,5 +20,10 @@ export class AppComponent {
       status: 'pausado'
     }
   ];
+  mostrar = true;
+
+  displayList(): void {
+    this.mostrar = !this.mostrar;
+  }
   
 }
