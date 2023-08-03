@@ -17,7 +17,19 @@ export class AppComponent {
     },
     {
       name: 'Shuanaxhi Jimenez',
+      status: 'aprobado'
+    },
+    {
+      name: 'Nicolas Gomez',
+      status: 'aprobado'
+    },
+    {
+      name: 'Michael Rivera',
       status: 'pausado'
+    },
+    {
+      name: 'Nicol Robles',
+      status: 'reprobado'
     }
   ];
   mostrar = true;

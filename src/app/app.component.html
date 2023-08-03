@@ -13,11 +13,14 @@
         <th>Estado</th>
       </thead>
       <tbody>
-        <tr *ngFor="let student of studentsList; let i = index; let total=count;">
+        <tr *ngFor="let student of studentsList; let i = index; let total=count;" [ngSwitch]="student.status">
           <td>{{ i+1 }} - {{ total }} </td>
           <td>{{student.name}}</td>
           <td>
-            <span class="badge" [ngClass]="student.status == 'titulado' ? 'bg-success' : 'bg-secondary'">{{student.status}}</span>
+            <span *ngSwitchCase="'titulado'" class="badge bg-success">{{student.status}}</span>
+            <span *ngSwitchCase="'aprobado'" class="badge bg-secondary">{{student.status}}</span>
+            <span *ngSwitchCase="'reprobado'" class="badge bg-danger">{{student.status}}</span>
+            <span *ngSwitchCase="'pausado'" class="badge bg-warning">{{student.status}}</span>
           </td>
         </tr>
       </tbody>
