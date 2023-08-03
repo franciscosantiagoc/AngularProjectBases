@@ -16,7 +16,9 @@
         <tr *ngFor="let student of studentsList; let i = index; let total=count;">
           <td>{{ i+1 }} - {{ total }} </td>
           <td>{{student.name}}</td>
-          <td [ngStyle]="{'font-style': student.status === 'titulado' ? 'italic' : 'normal'}">{{student.status}}</td>
+          <td>
+            <span class="badge" [ngClass]="student.status == 'titulado' ? 'bg-success' : 'bg-secondary'">{{student.status}}</span>
+          </td>
         </tr>
       </tbody>
     </table>
