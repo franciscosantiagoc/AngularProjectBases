@@ -6,7 +6,7 @@
   </div>
     <br>
 
-    <table class="table" *ngIf="mostrar">
+    <table class="table" *ngIf="mostrar && studentsList.length > 0">
       <thead>
         <th>No.</th>
         <th>Nombre</th>
@@ -20,5 +20,7 @@
         </tr>
       </tbody>
     </table>
-  
+
+    <h3 *ngIf="studentsList.length == 0">No está registrado ningun estudiante</h3>
+
 </div>

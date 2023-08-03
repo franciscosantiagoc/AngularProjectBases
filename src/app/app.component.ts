@@ -25,5 +25,5 @@ export class AppComponent {
   displayList(): void {
     this.mostrar = !this.mostrar;
   }
-  
+
 }
