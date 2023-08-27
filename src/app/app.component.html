@@ -1,31 +1,11 @@
 <div class="container mt-4">
   <div class="row">
 
-    <h3>Listado de estudiantes</h3>
-    <button class="btn btn-primary" (click)="displayList()">{{ !mostrar ? 'Mostrar listado' : 'Ocultar listado'}}</button>
+    <h3>{{title}}</h3>
+    <app-counter></app-counter>
+
+    <app-heroes-hero></app-heroes-hero>
+    <app-heroes-list></app-heroes-list>
+
   </div>
-    <br>
-
-    <table class="table" *ngIf="mostrar && studentsList.length > 0">
-      <thead>
-        <th>No.</th>
-        <th>Nombre</th>
-        <th>Estado</th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let student of studentsList; let i = index; let total=count;" [ngSwitch]="student.status">
-          <td>{{ i+1 }} - {{ total }} </td>
-          <td>{{student.name}}</td>
-          <td>
-            <span *ngSwitchCase="'titulado'" class="badge bg-success">{{student.status}}</span>
-            <span *ngSwitchCase="'aprobado'" class="badge bg-secondary">{{student.status}}</span>
-            <span *ngSwitchCase="'reprobado'" class="badge bg-danger">{{student.status}}</span>
-            <span *ngSwitchCase="'pausado'" class="badge bg-warning">{{student.status}}</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3 *ngIf="studentsList.length == 0">No está registrado ningun estudiante</h3>
-
 </div>
