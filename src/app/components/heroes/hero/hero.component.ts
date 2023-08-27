@@ -17,4 +17,12 @@ export class HeroComponent {
     return `${this.name} tiene ${this.age} años`;
   }
 
+  changeHero(): void {
+    this.name = 'Robert Downie Junior';
+  }
+
+  changeAge(): void {
+    this.age = 28;
+  }
+
 }
