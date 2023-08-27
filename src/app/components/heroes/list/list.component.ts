@@ -9,12 +9,11 @@ export class ListComponent {
   public heroNames: string[] = [
     'Spiderman', 'Thor', 'Ironman', 'Capitain America'
   ];
-
-  public displayAlert = false;
+  public heroDeleted: string | undefined = '';
 
 
   deleteLastItem (): void{
-    this.heroNames.pop();
-    this.displayAlert = true;
+    let hero = this.heroNames.pop();
+    this.heroDeleted = hero;
   }
 }
