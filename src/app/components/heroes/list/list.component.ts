@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
+  public heroNames: string[] = [
+    'Spiderman', 'Thor', 'Ironman', 'Capitain America'
+  ];
 
+  public displayAlert = false;
+
+
+  deleteLastItem (): void{
+    this.heroNames.pop();
+    this.displayAlert = true;
+  }
 }
