@@ -24,8 +24,10 @@ export class AddCharacterComponent {
     this.resetCharacter();
   }
   resetCharacter (): void {
-    this.character.name = '',
-    this.character.power = 0
+    this.character = {
+      name: '',
+      power: 0
+    }
   }
 
 }
