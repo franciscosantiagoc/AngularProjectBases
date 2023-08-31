@@ -5,7 +5,6 @@
     let i = index;
     let isFirst = first;
     let isLast = last;
-    let isEven = even;
   " class="list-group-item"
     [ngClass]="{
       'list-group-item-success': isFirst == true,
@@ -16,8 +15,6 @@
     >
     <span class="text-primary">{{i+1}}.-</span>
      {{character.name}} - {{character.power}}
-
-     posicion {{i}} es Par: {{isEven}}
 
   </li>
 </ul>
