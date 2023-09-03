@@ -13,7 +13,7 @@ export class AddCharacterComponent {
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character: Character = {
-    id: '',
+    id: uuid(),
     name: '',
     power: 0
   }

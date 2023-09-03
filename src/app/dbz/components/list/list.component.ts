@@ -14,7 +14,7 @@ export class ListComponent {
   @Output()
   public onRemoveID: EventEmitter<string> = new EventEmitter;
 
-  onDeleteCharacter = (id: string):void => {
+  onDeleteCharacter = (id?: string):void => {
     this.onRemoveID.emit(id);
   }
 }
