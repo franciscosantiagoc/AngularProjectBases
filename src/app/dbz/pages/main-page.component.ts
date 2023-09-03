@@ -30,4 +30,10 @@ export class MainPageComponent {
   onNewCharacter(character: Character ): void {
     this.characters.push(character);
   };
+
+  onRemoveCharacter(index: number): void {
+    //this.characters = this.characters.filter((_, i) => i !== index);
+    this.characters.splice(index, 1);
+    console.log('index deleted', index)
+  };
 }

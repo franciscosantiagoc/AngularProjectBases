@@ -5,7 +5,7 @@
     let i = index;
     let isFirst = first;
     let isLast = last;
-  " class="list-group-item"
+  " class="list-group-item justify-content-between"
     [ngClass]="{
       'list-group-item-success': isFirst == true,
       'list-group-item-info': isLast==false && isFirst==false,
@@ -15,6 +15,8 @@
     >
     <span class="text-primary">{{i+1}}.-</span>
      {{character.name}} - {{character.power}}
+
+     <button type="button" class="btn btn-danger mx-auto" (click)="onDeleteCharacter(i)">x</button>
 
   </li>
 </ul>
